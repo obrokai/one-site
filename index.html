@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>母親節獻禮｜Nardi 義大利戶外傢俱｜捷行國際家居</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+TC:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --ivory: #FAF7F2; --cream: #F2EDE4; --blush: #E8C4B0;
+  --rose: #C97B6E; --deep: #8B4A40; --sage: #7A8C6E;
+  --dark: #2A2420; --warm: #C8A97A; --lgray: #D8D0C8;
+  --serif: 'Cormorant Garamond', 'Noto Serif TC', Georgia, serif;
+  --sans: 'Noto Serif TC', Georgia, serif;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--ivory); color: var(--dark); overflow-x: hidden; }
+
+/* HERO */
+.hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background-image: url('images/hero.jpg'); background-size: cover; background-position: center; z-index: 0; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(42,36,32,0.25) 0%, rgba(42,36,32,0.55) 60%, rgba(42,36,32,0.85) 100%), radial-gradient(ellipse 60% 40% at 50% 40%, rgba(201,123,110,0.12) 0%, transparent 70%); z-index: 1; }
+.petal { position: absolute; width: 6px; height: 10px; background: rgba(232,196,176,0.45); border-radius: 50% 0 50% 0; animation: fall linear infinite; opacity: 0; z-index: 2; }
+@keyframes fall { 0% { transform: translateY(-20px) rotate(0deg); opacity: 0; } 10% { opacity: 0.7; } 90% { opacity: 0.3; } 100% { transform: translateY(110vh) rotate(720deg); opacity: 0; } }
+
+.hero-content { position: relative; z-index: 3; padding: 40px 24px; max-width: 700px; }
+.hero-eyebrow { font-family: var(--serif); font-size: clamp(10px, 2.5vw, 13px); letter-spacing: 5px; color: var(--warm); text-transform: uppercase; margin-bottom: 20px; opacity: 0; animation: fadeUp 1s ease 0.3s forwards; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+.hero-title { font-family: var(--serif); font-size: clamp(42px, 10vw, 88px); font-weight: 300; color: var(--ivory); line-height: 1.05; margin-bottom: 8px; opacity: 0; animation: fadeUp 1s ease 0.5s forwards; text-shadow: 0 4px 24px rgba(0,0,0,0.3); }
+.hero-title em { font-style: italic; color: var(--blush); font-weight: 300; }
+.hero-subtitle { font-family: var(--serif); font-size: clamp(16px, 4vw, 26px); font-weight: 300; font-style: italic; color: var(--blush); margin-bottom: 32px; opacity: 0; animation: fadeUp 1s ease 0.7s forwards; text-shadow: 0 2px 12px rgba(0,0,0,0.3); }
+.hero-line { width: 60px; height: 1px; background: var(--warm); margin: 0 auto 28px; opacity: 0; animation: fadeUp 1s ease 0.9s forwards; }
+.hero-desc { font-size: clamp(13px, 3vw, 15px); color: rgba(250,247,242,0.85); line-height: 1.9; max-width: 480px; margin: 0 auto 42px; font-weight: 300; opacity: 0; animation: fadeUp 1s ease 1.0s forwards; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+.hero-cta { display: inline-flex; align-items: center; gap: 10px; background: var(--rose); color: var(--ivory); text-decoration: none; padding: 16px 38px; font-family: var(--serif); font-size: 14px; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s ease; opacity: 0; animation: fadeUp 1s ease 1.2s forwards; border: 1px solid var(--rose); box-shadow: 0 6px 24px rgba(201,123,110,0.35); }
+.hero-cta:hover { background: transparent; border-color: var(--blush); color: var(--blush); transform: translateY(-2px); }
+.hero-cta svg { width: 16px; height: 16px; }
+
+.hero-badge { position: absolute; top: 32px; right: 32px; width: 90px; height: 90px; background: var(--rose); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: var(--serif); color: var(--ivory); z-index: 4; opacity: 0; animation: fadeIn 1s ease 1.5s forwards, spin-slow 20s linear 2s infinite; box-shadow: 0 8px 28px rgba(0,0,0,0.35); }
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+.hero-badge-inner { text-align: center; animation: counter-spin 20s linear 2s infinite; }
+@keyframes counter-spin { to { transform: rotate(-360deg); } }
+.badge-top { font-size: 9px; letter-spacing: 1px; opacity: 0.85; }
+.badge-main { font-size: 20px; font-weight: 600; line-height: 1; }
+.badge-sub { font-size: 8px; letter-spacing: 0.5px; opacity: 0.85; }
+
+.scroll-hint { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; z-index: 3; opacity: 0; animation: fadeIn 1s ease 2s forwards; }
+.scroll-hint span { font-size: 9px; letter-spacing: 3px; color: rgba(250,247,242,0.55); text-transform: uppercase; }
+.scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(250,247,242,0.55), transparent); animation: grow 1.5s ease-in-out 2.5s infinite; }
+@keyframes grow { 0%,100% { transform: scaleY(0.3); } 50% { transform: scaleY(1); } }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* INTRO STRIP */
+.intro-strip { background: var(--cream); padding: 28px 24px; text-align: center; border-bottom: 1px solid var(--lgray); }
+.intro-strip p { font-family: var(--serif); font-size: clamp(13px, 3vw, 16px); font-style: italic; color: var(--deep); letter-spacing: 0.5px; line-height: 1.8; }
+.intro-strip strong { font-weight: 600; color: var(--rose); font-style: normal; }
+
+/* SECTIONS */
+.section { padding: clamp(60px, 10vw, 100px) 24px; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-label { font-size: 10px; letter-spacing: 4px; color: var(--rose); text-transform: uppercase; margin-bottom: 12px; display: block; }
+.section-title { font-family: var(--serif); font-size: clamp(28px, 6vw, 52px); font-weight: 300; color: var(--dark); line-height: 1.15; margin-bottom: 16px; }
+.section-title em { font-style: italic; color: var(--rose); }
+.section-body { font-size: clamp(13px, 2.5vw, 15px); color: #6A5E56; line-height: 1.9; max-width: 560px; font-weight: 300; }
+
+/* BRAND */
+.brand-section { background: var(--ivory); }
+.brand-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 50px; }
+@media (max-width: 768px) { .brand-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+.brand-visual { position: relative; aspect-ratio: 4/5; overflow: hidden; background: var(--dark); }
+.brand-visual img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.8s ease; }
+.brand-visual:hover img { transform: scale(1.04); }
+.brand-visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(42,36,32,0.5) 100%); pointer-events: none; }
+
+.brand-stats-overlay { position: absolute; bottom: 0; left: 0; right: 0; display: grid; grid-template-columns: 1fr 1fr; z-index: 2; background: rgba(42,36,32,0.75); backdrop-filter: blur(4px); }
+.brand-stat-mini { padding: 18px 14px; text-align: center; border-right: 1px solid rgba(250,247,242,0.08); border-top: 1px solid rgba(250,247,242,0.08); }
+.brand-stat-mini:nth-child(2n) { border-right: none; }
+.brand-stat-num { font-family: var(--serif); font-size: 26px; font-weight: 300; color: var(--warm); line-height: 1; margin-bottom: 4px; }
+.brand-stat-label { font-size: 9px; letter-spacing: 2px; color: rgba(250,247,242,0.55); text-transform: uppercase; }
+
+.brand-tag { position: absolute; top: 24px; left: 24px; background: var(--rose); padding: 6px 14px; font-size: 9px; letter-spacing: 3px; color: var(--ivory); text-transform: uppercase; z-index: 2; box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
+
+.brand-text .section-body { margin-bottom: 32px; }
+.brand-text .section-body p { margin-bottom: 16px; }
+.brand-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.brand-pill { border: 1px solid var(--lgray); padding: 7px 16px; font-size: 11px; letter-spacing: 1px; color: #7A6E66; }
+
+/* PRODUCTS */
+.products-section { background: var(--cream); }
+.products-header { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; margin-bottom: 50px; }
+.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2px; }
+
+.product-card { background: var(--ivory); position: relative; overflow: hidden; cursor: pointer; transition: transform 0.4s ease; }
+.product-card:hover { transform: translateY(-4px); }
+
+.product-visual { aspect-ratio: 4/3; position: relative; overflow: hidden; background: var(--dark); }
+.product-visual img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s ease; }
+.product-card:hover .product-visual img { transform: scale(1.06); }
+
+.product-color-dot { position: absolute; bottom: 14px; right: 14px; width: 22px; height: 22px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.7); z-index: 2; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+
+.product-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(42,36,32,0.7) 100%); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 24px; opacity: 0; transition: opacity 0.3s ease; z-index: 3; }
+.product-card:hover .product-overlay { opacity: 1; }
+.overlay-btn { background: var(--rose); color: var(--ivory); text-decoration: none; padding: 11px 26px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-family: var(--serif); transition: background 0.2s; box-shadow: 0 4px 16px rgba(0,0,0,0.25); }
+.overlay-btn:hover { background: var(--deep); }
+
+.product-info { padding: 22px 20px 24px; }
+.product-rank { font-size: 9px; letter-spacing: 3px; color: var(--rose); text-transform: uppercase; margin-bottom: 6px; }
+.product-name { font-family: var(--serif); font-size: 19px; font-weight: 400; color: var(--dark); margin-bottom: 4px; line-height: 1.3; }
+.product-color { font-size: 11px; color: #9A8E86; letter-spacing: 0.5px; margin-bottom: 12px; }
+.product-stock { display: flex; align-items: center; justify-content: space-between; }
+.stock-badge { font-size: 9px; letter-spacing: 2px; padding: 4px 10px; text-transform: uppercase; color: var(--sage); border: 1px solid var(--sage); }
+.product-sku { font-size: 9px; color: #C0B8B0; letter-spacing: 1px; }
+
+/* GIFT GUIDE */
+.gift-section { background: var(--dark); }
+.gift-section .section-label { color: var(--blush); }
+.gift-section .section-title { color: var(--ivory); }
+.gift-section .section-body { color: rgba(250,247,242,0.55); }
+
+.gift-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 4px; margin-top: 50px; }
+.gift-card { position: relative; overflow: hidden; aspect-ratio: 3/4; cursor: pointer; }
+.gift-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+.gift-card:hover img { transform: scale(1.05); }
+.gift-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(42,36,32,0.2) 0%, rgba(42,36,32,0.5) 50%, rgba(42,36,32,0.9) 100%); z-index: 1; }
+.gift-card-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 28px 24px; z-index: 2; }
+.gift-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; z-index: 2; }
+.gift-card:nth-child(1)::after { background: var(--rose); }
+.gift-card:nth-child(2)::after { background: var(--warm); }
+.gift-card:nth-child(3)::after { background: var(--sage); }
+
+.gift-num { font-family: var(--serif); font-size: 48px; font-weight: 300; font-style: italic; color: rgba(250,247,242,0.25); line-height: 1; margin-bottom: 10px; }
+.gift-title { font-family: var(--serif); font-size: 22px; font-weight: 400; color: var(--ivory); margin-bottom: 10px; line-height: 1.3; }
+.gift-body { font-size: 13px; color: rgba(250,247,242,0.75); line-height: 1.7; }
+.gift-products { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px; }
+.gift-tag { font-size: 9px; letter-spacing: 1.5px; padding: 4px 10px; border: 1px solid rgba(250,247,242,0.35); color: rgba(250,247,242,0.85); text-transform: uppercase; background: rgba(250,247,242,0.08); backdrop-filter: blur(4px); }
+
+/* MADE IN ITALY */
+.italy-section { background: var(--ivory); position: relative; overflow: hidden; }
+.italy-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: center; margin-top: 50px; }
+@media (max-width: 768px) { .italy-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+.italy-visual { aspect-ratio: 4/5; overflow: hidden; position: relative; }
+.italy-visual img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.8s ease; }
+.italy-visual:hover img { transform: scale(1.04); }
+.italy-visual-tag { position: absolute; bottom: 24px; left: 24px; background: var(--ivory); padding: 8px 16px; font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--deep); }
+
+.italy-items { display: flex; flex-direction: column; gap: 32px; }
+.italy-item { position: relative; }
+.italy-num { font-family: var(--serif); font-size: 48px; font-weight: 300; font-style: italic; color: var(--cream); line-height: 0.9; margin-bottom: 10px; }
+.italy-title { font-family: var(--serif); font-size: 20px; font-weight: 400; color: var(--dark); margin-bottom: 8px; }
+.italy-body { font-size: 13px; color: #7A6E66; line-height: 1.8; }
+.italy-accent { width: 24px; height: 2px; background: var(--rose); margin-bottom: 12px; }
+
+/* CTA */
+.cta-section { background: linear-gradient(160deg, var(--deep) 0%, #5C2820 100%); padding: clamp(70px, 12vw, 120px) 24px; text-align: center; position: relative; overflow: hidden; }
+.cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 20% 30%, rgba(232,196,176,0.15) 0%, transparent 60%), radial-gradient(ellipse 50% 60% at 80% 70%, rgba(200,169,122,0.12) 0%, transparent 55%); }
+.cta-content { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+.cta-eyebrow { font-size: 10px; letter-spacing: 5px; color: var(--blush); text-transform: uppercase; margin-bottom: 20px; }
+.cta-title { font-family: var(--serif); font-size: clamp(32px, 7vw, 60px); font-weight: 300; color: var(--ivory); line-height: 1.15; margin-bottom: 20px; }
+.cta-title em { font-style: italic; color: var(--blush); }
+.cta-desc { font-size: clamp(13px, 2.5vw, 15px); color: rgba(250,247,242,0.6); line-height: 1.9; margin-bottom: 42px; font-weight: 300; }
+
+.line-btn { display: inline-flex; align-items: center; gap: 14px; background: #06C755; color: #fff; text-decoration: none; padding: 18px 44px; font-family: var(--serif); font-size: 15px; letter-spacing: 1px; transition: all 0.3s ease; border-radius: 2px; box-shadow: 0 8px 32px rgba(6,199,85,0.3); }
+.line-btn:hover { background: #04A847; transform: translateY(-3px); box-shadow: 0 14px 40px rgba(6,199,85,0.4); }
+.line-btn svg { width: 22px; height: 22px; flex-shrink: 0; }
+.cta-note { margin-top: 20px; font-size: 11px; color: rgba(250,247,242,0.3); letter-spacing: 1px; }
+
+.cta-floating-decor { position: absolute; font-family: var(--serif); font-style: italic; font-size: 180px; font-weight: 300; color: rgba(250,247,242,0.03); pointer-events: none; line-height: 1; }
+.decor-left { bottom: -20px; left: -20px; }
+.decor-right { top: -20px; right: -20px; }
+
+/* FOOTER */
+footer { background: var(--dark); padding: 32px 24px; text-align: center; border-top: 1px solid rgba(250,247,242,0.06); }
+footer p { font-size: 11px; color: rgba(250,247,242,0.25); letter-spacing: 1.5px; line-height: 2; }
+footer strong { color: rgba(250,247,242,0.45); font-weight: 400; }
+
+/* STICKY LINE */
+.sticky-line { position: fixed; bottom: 24px; right: 24px; z-index: 100; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.sticky-line-btn { display: flex; align-items: center; gap: 10px; background: #06C755; color: #fff; text-decoration: none; padding: 14px 22px; border-radius: 50px; font-size: 13px; font-family: var(--serif); letter-spacing: 0.5px; box-shadow: 0 6px 24px rgba(6,199,85,0.4); transition: all 0.3s ease; animation: pulse-green 2.5s ease-in-out infinite; }
+.sticky-line-btn:hover { transform: scale(1.05); box-shadow: 0 8px 30px rgba(6,199,85,0.5); }
+.sticky-line-btn svg { width: 18px; height: 18px; }
+@keyframes pulse-green { 0%, 100% { box-shadow: 0 6px 24px rgba(6,199,85,0.4); } 50% { box-shadow: 0 6px 32px rgba(6,199,85,0.65); } }
+.sticky-label { font-size: 10px; background: var(--rose); color: var(--ivory); padding: 3px 10px; border-radius: 20px; letter-spacing: 1px; }
+
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+@media (max-width: 640px) {
+  .hero-badge { width: 72px; height: 72px; top: 20px; right: 20px; }
+  .badge-main { font-size: 16px; }
+  .products-header { flex-direction: column; align-items: flex-start; }
+  .product-card:hover { transform: none; }
+  .product-overlay { opacity: 1; }
+  .product-info { padding: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-badge">
+    <div class="hero-badge-inner">
+      <div class="badge-top">母親節</div>
+      <div class="badge-main">限定</div>
+      <div class="badge-sub">獻禮</div>
+    </div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">捷行國際家居 × Nardi Italy</div>
+    <div class="hero-title">給媽媽一個<br><em>義大利的</em><br>戶外角落</div>
+    <div class="hero-subtitle">Made in Italy · 母親節限定推薦</div>
+    <div class="hero-line"></div>
+    <div class="hero-desc">30 年義大利工藝，一張椅子承載所有美好時光。<br>今年母親節，送她一個最喜歡的陽台角落。</div>
+    <a href="#products" class="hero-cta">探索禮物選品
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
+  </div>
+  <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- INTRO STRIP -->
+<div class="intro-strip">
+  <p><strong>Nardi</strong> 是義大利 Vicenza 的戶外傢俱品牌，銷售超過 <strong>130 個國家</strong>，每一件都在義大利工廠親手製作，<strong>抗 UV · 耐候 · 100% 可回收</strong>，是送給媽媽最長情的禮物。</p>
+</div>
+
+<!-- BRAND -->
+<section class="section brand-section" id="brand">
+  <div class="section-inner">
+    <div class="brand-grid">
+      <div class="brand-visual reveal">
+        <img src="images/brand.jpg" alt="Italian villa">
+        <div class="brand-tag">Made in Italy</div>
+        <div class="brand-stats-overlay">
+          <div class="brand-stat-mini"><div class="brand-stat-num">1990</div><div class="brand-stat-label">創立年份</div></div>
+          <div class="brand-stat-mini"><div class="brand-stat-num">130+</div><div class="brand-stat-label">銷售國家</div></div>
+          <div class="brand-stat-mini"><div class="brand-stat-num">30+</div><div class="brand-stat-label">品牌年資</div></div>
+          <div class="brand-stat-mini"><div class="brand-stat-num">50+</div><div class="brand-stat-label">設計作品</div></div>
+        </div>
+      </div>
+      <div class="brand-text">
+        <span class="section-label reveal">品牌故事</span>
+        <h2 class="section-title reveal">一個義大利小鎮，<br>做出全球都在<em>坐</em>的椅子</h2>
+        <div class="section-body reveal">
+          <p>1990 年，Giampietro Nardi 在義大利 Vicenza 的 Chiampo 小鎮創立了 Nardi。三十年來，每一件傢俱都在這裡的工廠生產，從未妥協。</p>
+          <p>設計師 Raffaello Galiotto 與品牌合作超過 30 年，所有系列均出自他一人之手——他從威尼斯藝術學院畢業，用藝術家的眼光，突破了人們對塑料傢俱的想像。</p>
+        </div>
+        <div class="brand-pills reveal">
+          <span class="brand-pill">抗 UV 耐候</span>
+          <span class="brand-pill">100% 可回收</span>
+          <span class="brand-pill">Red Dot 得獎</span>
+          <span class="brand-pill">可疊放收納</span>
+          <span class="brand-pill">全系列 Made in Italy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section products-section" id="products">
+  <div class="section-inner">
+    <div class="products-header">
+      <div>
+        <span class="section-label reveal">母親節精選</span>
+        <h2 class="section-title reveal">為她挑選一件<br><em>最適合的</em>作品</h2>
+      </div>
+      <div class="section-body reveal" style="max-width:280px; text-align:right;">以下商品皆有現貨，<br>歡迎透過 LINE 諮詢搭配建議</div>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal">
+        <div class="product-visual">
+          <img src="images/product-komodo-terracotta.jpg" alt="Komodo">
+          <div class="product-color-dot" style="background:#B56E5E;"></div>
+          <div class="product-overlay"><a href="#line-cta" class="overlay-btn">立即諮詢</a></div>
+        </div>
+        <div class="product-info">
+          <div class="product-rank">庫存 No.1 · 椅類</div>
+          <div class="product-name">Komodo Seduta</div>
+          <div class="product-color">座椅框架 · BIANCO 白色</div>
+          <div class="product-stock"><span class="stock-badge">現貨充足</span><span class="product-sku">09ND40377-00000</span></div>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-delay-1">
+        <div class="product-visual">
+          <img src="images/product-net-yellow.jpg" alt="NET Yellow">
+          <div class="product-color-dot" style="background:#D4B84A;"></div>
+          <div class="product-overlay"><a href="#line-cta" class="overlay-btn">立即諮詢</a></div>
+        </div>
+        <div class="product-info">
+          <div class="product-rank">庫存 No.2 · 媽媽最愛色</div>
+          <div class="product-name">Net Relax Chair</div>
+          <div class="product-color">SENAPE · 芥末黃</div>
+          <div class="product-stock"><span class="stock-badge">現貨充足</span><span class="product-sku">09ND40327-56000</span></div>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-delay-2">
+        <div class="product-visual">
+          <img src="images/product-komodo.jpg" alt="NET White">
+          <div class="product-color-dot" style="background:#F0EDE8; border-color:#CCC;"></div>
+          <div class="product-overlay"><a href="#line-cta" class="overlay-btn">立即諮詢</a></div>
+        </div>
+        <div class="product-info">
+          <div class="product-rank">庫存 No.3 · 百搭經典</div>
+          <div class="product-name">Net Relax Chair</div>
+          <div class="product-color">BIANCO · 白色</div>
+          <div class="product-stock"><span class="stock-badge">現貨充足</span><span class="product-sku">09ND40327-00000</span></div>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-delay-1">
+        <div class="product-visual">
+          <img src="images/product-doga.jpg" alt="NET Coral">
+          <div class="product-color-dot" style="background:#D4826E;"></div>
+          <div class="product-overlay"><a href="#line-cta" class="overlay-btn">立即諮詢</a></div>
+        </div>
+        <div class="product-info">
+          <div class="product-rank">庫存 No.5 · 母親節首選色</div>
+          <div class="product-name">Net Relax Chair</div>
+          <div class="product-color">CORALLO · 珊瑚紅</div>
+          <div class="product-stock"><span class="stock-badge">現貨充足</span><span class="product-sku">09ND40327-75000</span></div>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-delay-2">
+        <div class="product-visual">
+          <img src="images/product-net-blue.jpg" alt="NET Table">
+          <div class="product-color-dot" style="background:#D4826E;"></div>
+          <div class="product-overlay"><a href="#line-cta" class="overlay-btn">立即諮詢</a></div>
+        </div>
+        <div class="product-info">
+          <div class="product-rank">庫存 No.6 · 桌類</div>
+          <div class="product-name">Net Table 100</div>
+          <div class="product-color">CORALLO · 珊瑚紅</div>
+          <div class="product-stock"><span class="stock-badge">現貨充足</span><span class="product-sku">09ND40064-75000</span></div>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-delay-3">
+        <div class="product-visual">
+          <img src="images/product-dining.jpg" alt="Net Table Salice">
+          <div class="product-color-dot" style="background:#8BA878;"></div>
+          <div class="product-overlay"><a href="#line-cta" class="overlay-btn">立即諮詢</a></div>
+        </div>
+        <div class="product-info">
+          <div class="product-rank">庫存 No.9 · 自然系推薦</div>
+          <div class="product-name">Net Table 100</div>
+          <div class="product-color">SALICE · 淺綠色</div>
+          <div class="product-stock"><span class="stock-badge">現貨充足</span><span class="product-sku">09ND40064-04000</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GIFT GUIDE -->
+<section class="section gift-section" id="gift">
+  <div class="section-inner">
+    <span class="section-label reveal">選禮指南</span>
+    <h2 class="section-title reveal">不知道送什麼？<br><em>讓我們幫你挑</em></h2>
+    <p class="section-body reveal">根據媽媽的空間與喜好，我們整理了三種送禮組合方向。</p>
+    <div class="gift-grid">
+      <div class="gift-card reveal">
+        <img src="images/gift-small.jpg" alt="Balcony">
+        <div class="gift-card-content">
+          <div class="gift-num">01</div>
+          <div class="gift-title">小陽台的<br>專屬角落</div>
+          <div class="gift-body">適合空間有限的陽台或窗邊，輕巧可疊放，色彩療癒。一張椅子就是一整個下午。</div>
+          <div class="gift-products"><span class="gift-tag">Net Relax</span><span class="gift-tag">芥末黃 / 珊瑚紅</span></div>
+        </div>
+      </div>
+      <div class="gift-card reveal reveal-delay-1">
+        <img src="images/gift-dining.jpg" alt="Dining">
+        <div class="gift-card-content">
+          <div class="gift-num">02</div>
+          <div class="gift-title">戶外用餐的<br>儀式感</div>
+          <div class="gift-body">桌椅成套，讓媽媽每天早晨的咖啡時光都像在義大利小鎮的露台上。</div>
+          <div class="gift-products"><span class="gift-tag">Net Table 100</span><span class="gift-tag">Chair × 2</span></div>
+        </div>
+      </div>
+      <div class="gift-card reveal reveal-delay-2">
+        <img src="images/gift-family.jpg" alt="Family">
+        <div class="gift-card-content">
+          <div class="gift-num">03</div>
+          <div class="gift-title">給全家人的<br>戶外客廳</div>
+          <div class="gift-body">Komodo 模組沙發系統，讓戶外空間像室內一樣舒適，是全家都能享受的節日禮物。</div>
+          <div class="gift-products"><span class="gift-tag">Komodo Seduta</span><span class="gift-tag">自由配置</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MADE IN ITALY -->
+<section class="section italy-section">
+  <div class="section-inner">
+    <span class="section-label reveal">為什麼選 Nardi</span>
+    <h2 class="section-title reveal">送給媽媽的，<br>值得<em>最好的</em></h2>
+    <div class="italy-grid">
+      <div class="italy-visual reveal">
+        <img src="images/italy.jpg" alt="Italian outdoor">
+        <div class="italy-visual-tag">Puglia · Italy</div>
+      </div>
+      <div class="italy-items">
+        <div class="italy-item reveal">
+          <div class="italy-num">30+</div><div class="italy-accent"></div>
+          <div class="italy-title">年義大利工藝</div>
+          <div class="italy-body">每一件傢俱都在義大利 Vicenza 工廠製造，品質從不妥協，這份承諾延續超過三十年。</div>
+        </div>
+        <div class="italy-item reveal reveal-delay-1">
+          <div class="italy-num">100%</div><div class="italy-accent"></div>
+          <div class="italy-title">可回收環保材質</div>
+          <div class="italy-body">聚丙烯材質抗 UV、耐候、無毒，送給媽媽的同時也對地球盡一份心意。</div>
+        </div>
+        <div class="italy-item reveal reveal-delay-2">
+          <div class="italy-num">∞</div><div class="italy-accent"></div>
+          <div class="italy-title">年的陪伴時光</div>
+          <div class="italy-body">不褪色、不變形、不怕風吹日曬——這不只是一件傢俱，是每個清晨與黃昏，陪在媽媽身邊的那張椅子。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="line-cta">
+  <div class="cta-floating-decor decor-left">N</div>
+  <div class="cta-floating-decor decor-right">M</div>
+  <div class="cta-content">
+    <div class="cta-eyebrow reveal">母親節限定 · 現在諮詢</div>
+    <h2 class="cta-title reveal">讓我們幫你<br>找到<em>最完美</em>的那一件</h2>
+    <p class="cta-desc reveal">不確定哪個顏色最適合？空間尺寸怎麼搭配？<br>透過官方 LINE 與我們聯繫，專人為你量身推薦。</p>
+    <a href="https://lin.ee/YOUR_LINE_ID" class="line-btn reveal" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.105.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      LINE 官方帳號諮詢
+    </a>
+    <div class="cta-note reveal">專人回覆 · 母親節前下單享優先配送</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>捷行國際家居</strong><br>Nardi Outdoor Furniture · Official Taiwan Distributor<br>Made in Italy · Since 1990</p>
+</footer>
+
+<!-- STICKY LINE -->
+<div class="sticky-line">
+  <div class="sticky-label">母親節限定</div>
+  <a href="https://lin.ee/YOUR_LINE_ID" class="sticky-line-btn" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.105.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    LINE 立即諮詢
+  </a>
+</div>
+
+<script>
+const hero = document.querySelector('.hero');
+for (let i = 0; i < 18; i++) {
+  const p = document.createElement('div');
+  p.className = 'petal';
+  p.style.cssText = `left: ${Math.random() * 100}%; width: ${4 + Math.random() * 6}px; height: ${7 + Math.random() * 8}px; animation-duration: ${8 + Math.random() * 12}s; animation-delay: ${Math.random() * 10}s; transform: rotate(${Math.random() * 360}deg);`;
+  hero.appendChild(p);
+}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+</body>
+</html>
