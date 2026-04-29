@@ -3,477 +3,1294 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>母親節獻禮｜Nardi 義大利戶外傢俱｜捷行國際家居</title>
+<title>母親節獻禮｜Hälsa 瑞典賀莎名床｜捷行國際家居</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Noto+Serif+TC:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-em { font-style: normal; font-weight: 600; }
 
 :root {
-  --ivory: #FAF7F2; --cream: #F2EDE4; --blush: #E8C4B0;
-  --rose: #C97B6E; --deep: #8B4A40; --sage: #7A8C6E;
-  --dark: #2A2420; --warm: #C8A97A; --lgray: #D8D0C8;
-  --serif: 'Inter', -apple-system, '蘋方-繁', 'PingFang TC', 'Heiti TC', sans-serif;
-  --sans: 'Inter', -apple-system, '蘋方-繁', 'PingFang TC', 'Heiti TC', sans-serif;
+  --ivory: #FAF8F4;
+  --cream: #F2EDE3;
+  --linen: #E8E0D0;
+  --birch: #C9BBA8;
+  --sage: #7A8C78;
+  --pine: #3D5245;
+  --deep-pine: #2A3B30;
+  --rose: #C4857A;
+  --warm: #B89A72;
+  --charcoal: #2C2C28;
+  --muted: #8A857C;
+  --serif: 'Cormorant Garamond', 'Noto Serif TC', Georgia, serif;
 }
 
 html { scroll-behavior: smooth; }
-body { font-family: 'Inter', -apple-system, '蘋方-繁', 'PingFang TC', 'Heiti TC', sans-serif; background: var(--ivory); color: var(--dark); overflow-x: hidden; }
+body { font-family: 'Noto Serif TC', Georgia, serif; background: var(--ivory); color: var(--charcoal); overflow-x: hidden; }
 
-/* HERO */
-.hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; background-image: url('images/hero.jpg'); background-size: cover; background-position: center; z-index: 0; }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(42,36,32,0.25) 0%, rgba(42,36,32,0.55) 60%, rgba(42,36,32,0.85) 100%), radial-gradient(ellipse 60% 40% at 50% 40%, rgba(201,123,110,0.12) 0%, transparent 70%); z-index: 1; }
-.petal { position: absolute; width: 6px; height: 10px; background: rgba(232,196,176,0.45); border-radius: 50% 0 50% 0; animation: fall linear infinite; opacity: 0; z-index: 2; }
-@keyframes fall { 0% { transform: translateY(-20px) rotate(0deg); opacity: 0; } 10% { opacity: 0.7; } 90% { opacity: 0.3; } 100% { transform: translateY(110vh) rotate(720deg); opacity: 0; } }
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 24px;
+  background: var(--deep-pine);
+  overflow: hidden;
+}
 
-.hero-content { position: relative; z-index: 3; padding: 40px 24px; max-width: 700px; }
-.hero-eyebrow { font-family: var(--serif); font-size: clamp(10px, 2.5vw, 13px); letter-spacing: 5px; color: var(--warm); text-transform: uppercase; margin-bottom: 20px; opacity: 0; animation: fadeUp 1s ease 0.3s forwards; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
-.hero-title { font-family: var(--serif); font-size: clamp(42px, 10vw, 88px); font-weight: 300; color: var(--ivory); line-height: 1.05; margin-bottom: 8px; opacity: 0; animation: fadeUp 1s ease 0.5s forwards; text-shadow: 0 4px 24px rgba(0,0,0,0.3); }
-.hero-title em { color: var(--blush); font-weight: 300; }
-.hero-subtitle { font-family: var(--serif); font-size: clamp(16px, 4vw, 26px); font-weight: 300; color: var(--blush); margin-bottom: 32px; opacity: 0; animation: fadeUp 1s ease 0.7s forwards; text-shadow: 0 2px 12px rgba(0,0,0,0.3); }
-.hero-line { width: 60px; height: 1px; background: var(--warm); margin: 0 auto 28px; opacity: 0; animation: fadeUp 1s ease 0.9s forwards; }
-.hero-desc { font-size: clamp(13px, 3vw, 15px); color: rgba(250,247,242,0.85); line-height: 1.9; max-width: 480px; margin: 0 auto 42px; font-weight: 300; opacity: 0; animation: fadeUp 1s ease 1.0s forwards; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
-.hero-cta { display: inline-flex; align-items: center; gap: 10px; background: var(--rose); color: var(--ivory); text-decoration: none; padding: 16px 38px; font-family: var(--serif); font-size: 14px; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s ease; opacity: 0; animation: fadeUp 1s ease 1.2s forwards; border: 1px solid var(--rose); box-shadow: 0 6px 24px rgba(201,123,110,0.35); }
-.hero-cta:hover { background: transparent; border-color: var(--blush); color: var(--blush); transform: translateY(-2px); }
-.hero-cta svg { width: 16px; height: 16px; }
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('images/hero.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  opacity: 0.35;
+  transform: scale(1.04);
+  animation: heroZoom 18s ease-in-out infinite alternate;
+}
 
-.hero-badge { position: absolute; top: 32px; right: 32px; width: 90px; height: 90px; background: var(--rose); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: var(--serif); color: var(--ivory); z-index: 4; opacity: 0; animation: fadeIn 1s ease 1.5s forwards, spin-slow 20s linear 2s infinite; box-shadow: 0 8px 28px rgba(0,0,0,0.35); }
-@keyframes spin-slow { to { transform: rotate(360deg); } }
-.hero-badge-inner { text-align: center; animation: counter-spin 20s linear 2s infinite; }
-@keyframes counter-spin { to { transform: rotate(-360deg); } }
-.badge-top { font-size: 9px; letter-spacing: 1px; opacity: 0.85; }
-.badge-main { font-size: 20px; font-weight: 600; line-height: 1; }
-.badge-sub { font-size: 8px; letter-spacing: 0.5px; opacity: 0.85; }
+@keyframes heroZoom {
+  from { transform: scale(1.04); }
+  to   { transform: scale(1.10); }
+}
 
-.scroll-hint { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; z-index: 3; opacity: 0; animation: fadeIn 1s ease 2s forwards; }
-.scroll-hint span { font-size: 9px; letter-spacing: 3px; color: rgba(250,247,242,0.55); text-transform: uppercase; }
-.scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(250,247,242,0.55), transparent); animation: grow 1.5s ease-in-out 2.5s infinite; }
-@keyframes grow { 0%,100% { transform: scaleY(0.3); } 50% { transform: scaleY(1); } }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(42,59,48,0.55) 0%,
+    rgba(42,59,48,0.30) 50%,
+    rgba(42,59,48,0.75) 100%
+  );
+}
 
-@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.hero-badge-row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+  animation: fadeUp 0.8s ease 0.2s both;
+}
 
-/* INTRO STRIP */
-.intro-strip { background: var(--cream); padding: 28px 24px; text-align: center; border-bottom: 1px solid var(--lgray); }
-.intro-strip p { font-family: var(--serif); font-size: clamp(13px, 3vw, 16px); color: var(--deep); letter-spacing: 0.5px; line-height: 1.8; }
-.intro-strip strong { font-weight: 600; color: var(--rose); font-style: normal; }
+.hero-badge {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: rgba(255,255,255,0.88);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  backdrop-filter: blur(8px);
+}
 
-/* SECTIONS */
-.section { padding: clamp(60px, 10vw, 100px) 24px; }
-.section-inner { max-width: 1200px; margin: 0 auto; }
-.section-label { font-size: 10px; letter-spacing: 4px; color: var(--rose); text-transform: uppercase; margin-bottom: 12px; display: block; }
-.section-title { font-family: var(--serif); font-size: clamp(28px, 6vw, 52px); font-weight: 300; color: var(--dark); line-height: 1.15; margin-bottom: 16px; }
-.section-title em { color: var(--rose); }
-.section-body { font-size: clamp(13px, 2.5vw, 15px); color: #6A5E56; line-height: 1.9; max-width: 560px; font-weight: 300; }
+.hero-badge.accent { background: var(--rose); border-color: var(--rose); }
 
-/* BRAND */
-.brand-section { background: var(--ivory); }
-.brand-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 50px; }
-@media (max-width: 768px) { .brand-grid { grid-template-columns: 1fr; gap: 36px; } }
+.hero-title {
+  position: relative;
+  z-index: 2;
+  font-family: var(--serif);
+  font-size: clamp(46px, 8vw, 100px);
+  font-weight: 300;
+  line-height: 1.08;
+  color: white;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+  animation: fadeUp 0.9s ease 0.4s both;
+}
 
-.brand-visual { position: relative; aspect-ratio: 4/5; overflow: hidden; background: var(--dark); }
-.brand-visual img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.8s ease; }
-.brand-visual:hover img { transform: scale(1.04); }
-.brand-visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(42,36,32,0.5) 100%); pointer-events: none; }
+.hero-title em { font-style: italic; color: #B8CEB0; }
 
-.brand-stats-overlay { position: absolute; bottom: 0; left: 0; right: 0; display: grid; grid-template-columns: 1fr 1fr; z-index: 2; background: rgba(42,36,32,0.75); backdrop-filter: blur(4px); }
-.brand-stat-mini { padding: 18px 14px; text-align: center; border-right: 1px solid rgba(250,247,242,0.08); border-top: 1px solid rgba(250,247,242,0.08); }
-.brand-stat-mini:nth-child(2n) { border-right: none; }
-.brand-stat-num { font-family: var(--serif); font-size: 26px; font-weight: 300; color: var(--warm); line-height: 1; margin-bottom: 4px; }
-.brand-stat-label { font-size: 9px; letter-spacing: 2px; color: rgba(250,247,242,0.55); text-transform: uppercase; }
+.hero-sub {
+  position: relative;
+  z-index: 2;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.7);
+  max-width: 480px;
+  line-height: 1.85;
+  margin-bottom: 44px;
+  animation: fadeUp 0.9s ease 0.6s both;
+}
 
-.brand-tag { position: absolute; top: 24px; left: 24px; background: var(--rose); padding: 6px 14px; font-size: 9px; letter-spacing: 3px; color: var(--ivory); text-transform: uppercase; z-index: 2; box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
+.hero-cta-row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeUp 0.9s ease 0.8s both;
+}
 
-.brand-text .section-body { margin-bottom: 32px; }
-.brand-text .section-body p { margin-bottom: 16px; }
-.brand-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
-.brand-pill { border: 1px solid var(--lgray); padding: 7px 16px; font-size: 11px; letter-spacing: 1px; color: #7A6E66; }
+.btn-hero-primary {
+  background: white;
+  color: var(--pine);
+  font-family: var(--serif);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  padding: 14px 38px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.25s;
+}
 
-/* PRODUCTS */
-.products-section { background: var(--cream); }
-.products-header { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; margin-bottom: 50px; }
-.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2px; }
+.btn-hero-primary:hover { background: #B8CEB0; }
 
-.product-card { background: var(--ivory); position: relative; overflow: hidden; cursor: pointer; transition: transform 0.4s ease; }
-.product-card:hover { transform: translateY(-4px); }
+.btn-hero-ghost {
+  background: transparent;
+  color: rgba(255,255,255,0.85);
+  font-family: var(--serif);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  padding: 14px 38px;
+  border: 1px solid rgba(255,255,255,0.3);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.25s;
+}
 
-.product-visual { aspect-ratio: 4/3; position: relative; overflow: hidden; background: var(--dark); }
-.product-visual img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s ease; }
-.product-card:hover .product-visual img { transform: scale(1.06); }
+.btn-hero-ghost:hover { border-color: white; color: white; }
 
-.product-color-dot { position: absolute; bottom: 14px; right: 14px; width: 22px; height: 22px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.7); z-index: 2; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+.hero-scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: rgba(255,255,255,0.4);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 1s ease 1.2s both;
+}
 
-.product-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(42,36,32,0.7) 100%); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 24px; opacity: 0; transition: opacity 0.3s ease; z-index: 3; }
-.product-card:hover .product-overlay { opacity: 1; }
-.overlay-btn { background: var(--rose); color: var(--ivory); text-decoration: none; padding: 11px 26px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-family: var(--serif); transition: background 0.2s; box-shadow: 0 4px 16px rgba(0,0,0,0.25); }
-.overlay-btn:hover { background: var(--deep); }
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,0.25);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
 
-.product-info { padding: 22px 20px 24px; }
-.product-rank { font-size: 9px; letter-spacing: 3px; color: var(--rose); text-transform: uppercase; margin-bottom: 6px; }
-.product-name { font-family: var(--serif); font-size: 19px; font-weight: 400; color: var(--dark); margin-bottom: 4px; line-height: 1.3; }
-.product-color { font-size: 11px; color: #9A8E86; letter-spacing: 0.5px; margin-bottom: 12px; }
-.product-stock { display: flex; align-items: center; justify-content: space-between; }
-.stock-badge { font-size: 9px; letter-spacing: 2px; padding: 4px 10px; text-transform: uppercase; color: var(--sage); border: 1px solid var(--sage); }
-.product-sku { font-size: 9px; color: #C0B8B0; letter-spacing: 1px; }
+@keyframes scrollPulse {
+  0%,100% { opacity: 0.25; transform: scaleY(1); }
+  50% { opacity: 0.6; transform: scaleY(1.2); }
+}
 
-/* GIFT GUIDE */
-.gift-section { background: var(--dark); }
-.gift-section .section-label { color: var(--blush); }
-.gift-section .section-title { color: var(--ivory); }
-.gift-section .section-body { color: rgba(250,247,242,0.55); }
+/* ── TRUST BAR ── */
+.trust-bar {
+  background: var(--pine);
+  padding: 18px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
-.gift-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 4px; margin-top: 50px; }
-.gift-card { position: relative; overflow: hidden; aspect-ratio: 3/4; cursor: pointer; }
-.gift-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
-.gift-card:hover img { transform: scale(1.05); }
-.gift-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(42,36,32,0.2) 0%, rgba(42,36,32,0.5) 50%, rgba(42,36,32,0.9) 100%); z-index: 1; }
-.gift-card-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 28px 24px; z-index: 2; }
-.gift-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; z-index: 2; }
-.gift-card:nth-child(1)::after { background: var(--rose); }
-.gift-card:nth-child(2)::after { background: var(--warm); }
-.gift-card:nth-child(3)::after { background: var(--sage); }
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.8);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
 
-.gift-num { font-family: var(--serif); font-size: 48px; font-weight: 300; color: rgba(250,247,242,0.25); line-height: 1; margin-bottom: 10px; }
-.gift-title { font-family: var(--serif); font-size: 22px; font-weight: 400; color: var(--ivory); margin-bottom: 10px; line-height: 1.3; }
-.gift-body { font-size: 13px; color: rgba(250,247,242,0.75); line-height: 1.7; }
-.gift-products { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px; }
-.gift-tag { font-size: 9px; letter-spacing: 1.5px; padding: 4px 10px; border: 1px solid rgba(250,247,242,0.35); color: rgba(250,247,242,0.85); text-transform: uppercase; background: rgba(250,247,242,0.08); backdrop-filter: blur(4px); }
+.trust-dot { width: 4px; height: 4px; background: var(--sage); border-radius: 50%; }
 
-/* MADE IN ITALY */
-.italy-section { background: var(--ivory); position: relative; overflow: hidden; }
-.italy-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: center; margin-top: 50px; }
-@media (max-width: 768px) { .italy-grid { grid-template-columns: 1fr; gap: 36px; } }
+/* ── SECTION WRAPPER ── */
+.section { padding: 96px 60px; }
+.section-sm { padding: 72px 60px; }
 
-.italy-visual { aspect-ratio: 4/5; overflow: hidden; position: relative; }
-.italy-visual img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.8s ease; }
-.italy-visual:hover img { transform: scale(1.04); }
-.italy-visual-tag { position: absolute; bottom: 24px; left: 24px; background: var(--ivory); padding: 8px 16px; font-family: var(--serif); font-size: 13px; color: var(--deep); }
+.label {
+  font-size: 10.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 16px;
+}
 
-.italy-items { display: flex; flex-direction: column; gap: 32px; }
-.italy-item { position: relative; }
-.italy-num { font-family: var(--serif); font-size: 48px; font-weight: 300; color: var(--cream); line-height: 0.9; margin-bottom: 10px; }
-.italy-title { font-family: var(--serif); font-size: 20px; font-weight: 400; color: var(--dark); margin-bottom: 8px; }
-.italy-body { font-size: 13px; color: #7A6E66; line-height: 1.8; }
-.italy-accent { width: 24px; height: 2px; background: var(--rose); margin-bottom: 12px; }
+.label-sage { color: var(--sage); }
 
-/* CTA */
-.cta-section { background: linear-gradient(160deg, var(--deep) 0%, #5C2820 100%); padding: clamp(70px, 12vw, 120px) 24px; text-align: center; position: relative; overflow: hidden; }
-.cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 20% 30%, rgba(232,196,176,0.15) 0%, transparent 60%), radial-gradient(ellipse 50% 60% at 80% 70%, rgba(200,169,122,0.12) 0%, transparent 55%); }
-.cta-content { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
-.cta-eyebrow { font-size: 10px; letter-spacing: 5px; color: var(--blush); text-transform: uppercase; margin-bottom: 20px; }
-.cta-title { font-family: var(--serif); font-size: clamp(32px, 7vw, 60px); font-weight: 300; color: var(--ivory); line-height: 1.15; margin-bottom: 20px; }
-.cta-title em { color: var(--blush); }
-.cta-desc { font-size: clamp(13px, 2.5vw, 15px); color: rgba(250,247,242,0.6); line-height: 1.9; margin-bottom: 42px; font-weight: 300; }
+h2 {
+  font-family: var(--serif);
+  font-size: clamp(30px, 4vw, 54px);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--charcoal);
+}
 
-.line-btn { display: inline-flex; align-items: center; gap: 14px; background: #06C755; color: #fff; text-decoration: none; padding: 18px 44px; font-family: var(--serif); font-size: 15px; letter-spacing: 1px; transition: all 0.3s ease; border-radius: 2px; box-shadow: 0 8px 32px rgba(6,199,85,0.3); }
-.line-btn:hover { background: #04A847; transform: translateY(-3px); box-shadow: 0 14px 40px rgba(6,199,85,0.4); }
-.line-btn svg { width: 22px; height: 22px; flex-shrink: 0; }
-.cta-note { margin-top: 20px; font-size: 11px; color: rgba(250,247,242,0.3); letter-spacing: 1px; }
+h2 em { font-style: italic; color: var(--pine); }
 
-.cta-floating-decor { position: absolute; font-family: var(--serif); font-size: 180px; font-weight: 300; color: rgba(250,247,242,0.03); pointer-events: none; line-height: 1; }
-.decor-left { bottom: -20px; left: -20px; }
-.decor-right { top: -20px; right: -20px; }
+/* ── BRAND SECTION ── */
+.brand-section {
+  background: var(--cream);
+  padding: 96px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
 
-/* FOOTER */
-footer { background: var(--dark); padding: 32px 24px; text-align: center; border-top: 1px solid rgba(250,247,242,0.06); }
-footer p { font-size: 11px; color: rgba(250,247,242,0.25); letter-spacing: 1.5px; line-height: 2; }
-footer strong { color: rgba(250,247,242,0.45); font-weight: 400; }
+.brand-text .label { margin-bottom: 20px; }
+.brand-text h2 { margin-bottom: 32px; }
 
-/* STICKY LINE */
-.sticky-line { position: fixed; bottom: 24px; right: 24px; z-index: 100; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
-.sticky-line-btn { display: flex; align-items: center; gap: 10px; background: #06C755; color: #fff; text-decoration: none; padding: 14px 22px; border-radius: 50px; font-size: 13px; font-family: var(--serif); letter-spacing: 0.5px; box-shadow: 0 6px 24px rgba(6,199,85,0.4); transition: all 0.3s ease; animation: pulse-green 2.5s ease-in-out infinite; }
-.sticky-line-btn:hover { transform: scale(1.05); box-shadow: 0 8px 30px rgba(6,199,85,0.5); }
-.sticky-line-btn svg { width: 18px; height: 18px; }
-@keyframes pulse-green { 0%, 100% { box-shadow: 0 6px 24px rgba(6,199,85,0.4); } 50% { box-shadow: 0 6px 32px rgba(6,199,85,0.65); } }
-.sticky-label { font-size: 10px; background: var(--rose); color: var(--ivory); padding: 3px 10px; border-radius: 20px; letter-spacing: 1px; }
+.brand-text p {
+  font-size: 14.5px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
 
-/* REVEAL */
-.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.brand-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.pill {
+  background: white;
+  border: 1px solid var(--linen);
+  color: var(--charcoal);
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  padding: 7px 16px;
+}
+
+.brand-img-wrap { position: relative; }
+
+.brand-img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  display: block;
+}
+
+.brand-stats {
+  position: absolute;
+  bottom: -28px;
+  right: -28px;
+  background: var(--pine);
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  min-width: 220px;
+}
+
+.stat-num {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 300;
+  color: white;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+}
+
+/* ── PRODUCTS ── */
+.products-section {
+  background: var(--ivory);
+  padding: 96px 60px;
+}
+
+.products-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.products-header h2 { margin-top: 12px; margin-bottom: 16px; }
+
+.products-sub {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--muted);
+  max-width: 440px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.product-card {
+  background: white;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 48px rgba(61,82,69,0.12);
+  z-index: 2;
+}
+
+.product-card:hover .product-img { transform: scale(1.04); }
+
+.product-img-wrap {
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  position: relative;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.product-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  color: white;
+  background: var(--rose);
+}
+
+.product-tag.sage { background: var(--sage); }
+.product-tag.pine { background: var(--pine); }
+
+.product-body {
+  padding: 24px 24px 28px;
+  border-top: 1px solid var(--linen);
+}
+
+.product-series {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 6px;
+}
+
+.product-name {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--charcoal);
+  margin-bottom: 3px;
+}
+
+.product-name-zh {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 16px;
+}
+
+.product-detail {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--charcoal);
+  padding-left: 13px;
+  position: relative;
+}
+
+.product-detail::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 1px;
+  background: var(--birch);
+}
+
+.product-firmness {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.firmness-label {
+  font-size: 10px;
+  color: var(--muted);
+  width: 14px;
+}
+
+.firmness-track {
+  flex: 1;
+  height: 2px;
+  background: var(--linen);
+  border-radius: 1px;
+  position: relative;
+}
+
+.firmness-fill {
+  height: 100%;
+  background: var(--pine);
+  border-radius: 1px;
+}
+
+.product-stock {
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.product-stock span {
+  color: var(--sage);
+  font-weight: 400;
+}
+
+.product-cta {
+  display: block;
+  width: 100%;
+  padding: 11px;
+  text-align: center;
+  font-family: var(--serif);
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  color: var(--pine);
+  background: transparent;
+  border: 1px solid var(--pine);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.22s;
+}
+
+.product-cta:hover { background: var(--pine); color: white; }
+
+/* ── GIFT GUIDE ── */
+.gift-section {
+  background: var(--cream);
+  padding: 96px 60px;
+}
+
+.gift-header { text-align: center; margin-bottom: 60px; }
+.gift-header h2 { margin-top: 12px; }
+
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.gift-card {
+  background: white;
+  overflow: hidden;
+  transition: transform 0.35s ease;
+}
+
+.gift-card:hover { transform: translateY(-4px); }
+.gift-card:hover .gift-img { transform: scale(1.05); }
+
+.gift-img-wrap { overflow: hidden; aspect-ratio: 3/2; }
+
+.gift-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.55s ease;
+}
+
+.gift-num {
+  padding: 28px 28px 0;
+  font-family: var(--serif);
+  font-size: 42px;
+  font-weight: 300;
+  color: var(--linen);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.gift-body { padding: 0 28px 32px; }
+
+.gift-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.gift-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.gift-reco {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--pine);
+  border-top: 1px solid var(--linen);
+  padding-top: 14px;
+}
+
+.gift-reco strong { display: block; margin-bottom: 2px; font-weight: 600; }
+
+/* ── WHY ── */
+.why-section {
+  background: var(--charcoal);
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.why-img-wrap { position: relative; overflow: hidden; min-height: 560px; }
+
+.why-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  inset: 0;
+  opacity: 0.55;
+}
+
+.why-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(42,59,48,0.5) 0%, rgba(42,59,48,0.15) 100%);
+}
+
+.why-img-caption {
+  position: absolute;
+  bottom: 28px;
+  left: 32px;
+  color: rgba(255,255,255,0.5);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.why-text {
+  background: var(--deep-pine);
+  padding: 72px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.why-text .label { color: var(--sage); margin-bottom: 20px; }
+
+.why-text h2 {
+  color: white;
+  margin-bottom: 52px;
+  font-size: clamp(26px, 3vw, 44px);
+}
+
+.why-text h2 em { color: #B8CEB0; }
+
+.why-items { display: flex; flex-direction: column; gap: 0; }
+
+.why-item {
+  padding: 22px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.why-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.08); }
+
+.why-num {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.12);
+  line-height: 1;
+  padding-top: 2px;
+}
+
+.why-content-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 6px;
+  letter-spacing: 0.03em;
+}
+
+.why-content-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.48);
+  line-height: 1.75;
+}
+
+/* ── FINAL CTA ── */
+#line-cta {
+  background: var(--pine);
+  padding: 96px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#line-cta::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 50%;
+}
+
+#line-cta::after {
+  content: '';
+  position: absolute;
+  bottom: -120px; left: -60px;
+  width: 300px; height: 300px;
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 50%;
+}
+
+.cta-label {
+  font-size: 10.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-title {
+  font-family: var(--serif);
+  font-size: clamp(34px, 5vw, 64px);
+  font-weight: 300;
+  color: white;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-title em { font-style: italic; color: #B8CEB0; }
+
+.cta-sub {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  max-width: 460px;
+  margin: 0 auto 48px;
+  line-height: 1.85;
+  position: relative;
+  z-index: 1;
+}
+
+.line-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  color: var(--pine);
+  font-family: var(--serif);
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  padding: 18px 44px;
+  text-decoration: none;
+  transition: all 0.25s;
+  position: relative;
+  z-index: 1;
+  border: none;
+  cursor: pointer;
+}
+
+.line-btn:hover { background: #B8CEB0; }
+
+.line-icon { width: 22px; height: 22px; flex-shrink: 0; }
+
+.cta-note {
+  margin-top: 24px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.05em;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: #1A1F1C;
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-brand {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.08em;
+}
+
+.footer-brand em { font-style: italic; color: var(--sage); }
+
+.footer-info {
+  font-size: 11.5px;
+  color: rgba(255,255,255,0.3);
+  line-height: 1.8;
+  text-align: right;
+}
+
+/* ── FLOATING LINE BTN ── */
+.float-line {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  background: var(--pine);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  font-family: var(--serif);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(61,82,69,0.35);
+  transition: all 0.25s;
+}
+
+.float-line:hover { background: var(--deep-pine); transform: translateY(-2px); }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
 
-@media (max-width: 640px) {
-  .hero-badge { width: 72px; height: 72px; top: 20px; right: 20px; }
-  .badge-main { font-size: 16px; }
-  .products-header { flex-direction: column; align-items: flex-start; }
-  .product-card:hover { transform: none; }
-  .product-overlay { opacity: 1; }
-  .product-info { padding: 16px; }
+/* ── MOBILE ── */
+@media (max-width: 860px) {
+  .section, .section-sm { padding: 64px 24px; }
+  .brand-section { grid-template-columns: 1fr; padding: 64px 24px; gap: 48px; }
+  .brand-stats { position: static; margin-top: 20px; }
+  .brand-img { aspect-ratio: 3/2; }
+  .products-grid { grid-template-columns: 1fr; padding: 0; }
+  .products-section { padding: 64px 24px; }
+  .gift-grid { grid-template-columns: 1fr; }
+  .gift-section { padding: 64px 24px; }
+  .why-section { grid-template-columns: 1fr; }
+  .why-img-wrap { min-height: 260px; }
+  .why-text { padding: 56px 28px; }
+  #line-cta { padding: 72px 24px; }
+  footer { padding: 36px 24px; }
+  .footer-info { text-align: left; }
+  .trust-bar { padding: 14px 24px; gap: 12px; }
 }
 </style>
 </head>
 <body>
 
-<!-- HERO -->
+<!-- ─── HERO ─── -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
-  <div class="hero-badge">
-    <div class="hero-badge-inner">
-      <div class="badge-top">母親節</div>
-      <div class="badge-main">限定</div>
-      <div class="badge-sub">獻禮</div>
-    </div>
+
+  <div class="hero-badge-row">
+    <span class="hero-badge accent">母親節限定</span>
+    <span class="hero-badge">獻禮</span>
   </div>
-  <div class="hero-content">
-    <div class="hero-eyebrow">捷行國際家居 × Nardi Italy</div>
-    <div class="hero-title">給媽媽一個<br><em>義大利的</em><br>戶外角落</div>
-    <div class="hero-subtitle">Made in Italy · 母親節限定推薦</div>
-    <div class="hero-line"></div>
-    <div class="hero-desc">30 年義大利工藝，一張椅子承載所有美好時光。<br>今年母親節，送她一個最喜歡的陽台角落。</div>
-    <a href="#products" class="hero-cta">探索禮物選品
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-    </a>
+
+  <h1 class="hero-title">
+    給媽媽一夜<br>
+    <em>真正的好眠</em>
+  </h1>
+
+  <p class="hero-sub">
+    瑞典創立 · 1936 年起 · 全天然材質<br>
+    一張會呼吸的床墊，是最長情的母親節禮物。
+  </p>
+
+  <div class="hero-cta-row">
+    <a href="#products" class="btn-hero-primary">探索禮物選品</a>
+    <a href="#line-cta" class="btn-hero-ghost">LINE 諮詢</a>
   </div>
-  <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    Scroll
+  </div>
 </section>
 
-<!-- INTRO STRIP -->
-<div class="intro-strip">
-  <p><strong>Nardi</strong> 是義大利 Vicenza 的戶外傢俱品牌，銷售超過 <strong>130 個國家</strong>，每一件都在義大利工廠親手製作，<strong>抗 UV · 耐候 · 100% 可回收</strong>，是送給媽媽最長情的禮物。</p>
+<!-- ─── TRUST BAR ─── -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <span>🇸🇪</span>
+    瑞典原裝進口 · 1936 年創立
+  </div>
+  <div class="trust-dot"></div>
+  <div class="trust-item">
+    100% 全天然材質 · 無化學膠
+  </div>
+  <div class="trust-dot"></div>
+  <div class="trust-item">
+    OEKO-TEX® · GOTS 雙認證
+  </div>
+  <div class="trust-dot"></div>
+  <div class="trust-item">
+    職人手工縫製 · 彈簧壽命 25 年
+  </div>
+  <div class="trust-dot"></div>
+  <div class="trust-item">
+    📍 台中實體門市 · 歡迎預約試躺
+  </div>
 </div>
 
-<!-- BRAND -->
-<section class="section brand-section" id="brand">
-  <div class="section-inner">
-    <div class="brand-grid">
-      <div class="brand-visual reveal">
-        <img src="images/brand.jpg" alt="Italian villa">
-        <div class="brand-tag">Made in Italy</div>
-        <div class="brand-stats-overlay">
-          <div class="brand-stat-mini"><div class="brand-stat-num">1990</div><div class="brand-stat-label">創立年份</div></div>
-          <div class="brand-stat-mini"><div class="brand-stat-num">130+</div><div class="brand-stat-label">銷售國家</div></div>
-          <div class="brand-stat-mini"><div class="brand-stat-num">30+</div><div class="brand-stat-label">品牌年資</div></div>
-          <div class="brand-stat-mini"><div class="brand-stat-num">50+</div><div class="brand-stat-label">設計作品</div></div>
-        </div>
-      </div>
-      <div class="brand-text">
-        <span class="section-label reveal">品牌故事</span>
-        <h2 class="section-title reveal">一個義大利小鎮，<br>做出全球都在<em>坐</em>的椅子</h2>
-        <div class="section-body reveal">
-          <p>1990 年，Giampietro Nardi 在義大利 Vicenza 的 Chiampo 小鎮創立了 Nardi。三十年來，每一件傢俱都在這裡的工廠生產，從未妥協。</p>
-          <p>設計師 Raffaello Galiotto 與品牌合作超過 30 年，所有系列均出自他一人之手——他從威尼斯藝術學院畢業，用藝術家的眼光，突破了人們對塑料傢俱的想像。</p>
-        </div>
-        <div class="brand-pills reveal">
-          <span class="brand-pill">抗 UV 耐候</span>
-          <span class="brand-pill">100% 可回收</span>
-          <span class="brand-pill">Red Dot 得獎</span>
-          <span class="brand-pill">可疊放收納</span>
-          <span class="brand-pill">全系列 Made in Italy</span>
-        </div>
-      </div>
+<!-- ─── BRAND ─── -->
+<section class="brand-section reveal">
+  <div class="brand-text">
+    <div class="label">品牌故事</div>
+    <h2>一個瑞典小鎮，<br>做出<em>全球都在睡</em>的床墊</h2>
+
+    <p style="margin-top:28px">
+      1936 年，Hälsa 創立於波羅的海與美麗森林之間的蘭斯克魯納鎮。「Hälsa」在瑞典語意為「健康」——品牌名稱本身，就是對使用者最深的承諾。
+    </p>
+
+    <p>
+      設計師 Rik Claerhout（比利時）與 Camilla Zanatta（義大利）深受大自然啟發，將藝術工藝注入每一張床墊。全程由瑞典職人手工縫製，與 VOLVO 同源的高純度瑞典鋼製成彈簧，無法被機器複製。
+    </p>
+
+    <p>
+      在全球，生產全天然材質床墊的品牌極少，Hälsa 是其中之一。馬尾毛、駱駝毛、有機羊毛、比利時亞麻——每一層都可以被你親眼看到，親手觸摸。
+    </p>
+
+    <div class="brand-pills">
+      <span class="pill">🌿 全天然材質</span>
+      <span class="pill">✦ 無化學泡棉</span>
+      <span class="pill">🤲 職人手工縫製</span>
+      <span class="pill">🇸🇪 瑞典原裝進口</span>
+      <span class="pill">♻️ 風力發電生產</span>
     </div>
   </div>
-</section>
 
-<!-- PRODUCTS -->
-<section class="section products-section" id="products">
-  <div class="section-inner">
-    <div class="products-header">
+  <div class="brand-img-wrap reveal reveal-delay-1">
+    <img src="images/brand.jpg" alt="Hälsa 瑞典賀莎名床 - 品牌故事" class="brand-img" loading="lazy">
+    <div class="brand-stats">
       <div>
-        <span class="section-label reveal">母親節精選</span>
-        <h2 class="section-title reveal">為她挑選一件<br><em>最適合的</em>作品</h2>
+        <div class="stat-num">1936</div>
+        <div class="stat-label">創立年份</div>
       </div>
-      <div class="section-body reveal" style="max-width:280px; text-align:right;">以下商品皆有現貨，<br>歡迎透過 LINE 諮詢搭配建議</div>
-    </div>
-    <div class="products-grid">
-      <div class="product-card reveal">
-        <div class="product-visual">
-          <img src="images/product-komodo-terracotta.jpg" alt="Komodo">
-          <div class="product-color-dot" style="background:#B56E5E;"></div>
-          <div class="product-overlay"><a href="#line-cta" class="overlay-btn">立即諮詢</a></div>
-        </div>
-        <div class="product-info">
-          <div class="product-rank">庫存 No.1 · 椅類</div>
-          <div class="product-name">Komodo Seduta</div>
-          <div class="product-color">座椅框架 · BIANCO 白色</div>
-          <div class="product-stock"><span class="stock-badge">現貨充足</span><span class="product-sku">09ND40377-00000</span></div>
-        </div>
+      <div>
+        <div class="stat-num">85<span style="font-size:18px">+</span></div>
+        <div class="stat-label">品牌年資</div>
       </div>
-      <div class="product-card reveal reveal-delay-1">
-        <div class="product-visual">
-          <img src="images/product-net-yellow.jpg" alt="NET Yellow">
-          <div class="product-color-dot" style="background:#D4B84A;"></div>
-          <div class="product-overlay"><a href="#line-cta" class="overlay-btn">立即諮詢</a></div>
-        </div>
-        <div class="product-info">
-          <div class="product-rank">庫存 No.2 · 媽媽最愛色</div>
-          <div class="product-name">Net Relax Chair</div>
-          <div class="product-color">SENAPE · 芥末黃</div>
-          <div class="product-stock"><span class="stock-badge">現貨充足</span><span class="product-sku">09ND40327-56000</span></div>
-        </div>
+      <div>
+        <div class="stat-num">25<span style="font-size:18px">年</span></div>
+        <div class="stat-label">彈簧保固</div>
       </div>
-      <div class="product-card reveal reveal-delay-2">
-        <div class="product-visual">
-          <img src="images/product-komodo.jpg" alt="NET White">
-          <div class="product-color-dot" style="background:#F0EDE8; border-color:#CCC;"></div>
-          <div class="product-overlay"><a href="#line-cta" class="overlay-btn">立即諮詢</a></div>
-        </div>
-        <div class="product-info">
-          <div class="product-rank">庫存 No.3 · 百搭經典</div>
-          <div class="product-name">Net Relax Chair</div>
-          <div class="product-color">BIANCO · 白色</div>
-          <div class="product-stock"><span class="stock-badge">現貨充足</span><span class="product-sku">09ND40327-00000</span></div>
-        </div>
-      </div>
-      <div class="product-card reveal reveal-delay-1">
-        <div class="product-visual">
-          <img src="images/product-doga.jpg" alt="NET Coral">
-          <div class="product-color-dot" style="background:#D4826E;"></div>
-          <div class="product-overlay"><a href="#line-cta" class="overlay-btn">立即諮詢</a></div>
-        </div>
-        <div class="product-info">
-          <div class="product-rank">庫存 No.5 · 母親節首選色</div>
-          <div class="product-name">Net Relax Chair</div>
-          <div class="product-color">CORALLO · 珊瑚紅</div>
-          <div class="product-stock"><span class="stock-badge">現貨充足</span><span class="product-sku">09ND40327-75000</span></div>
-        </div>
-      </div>
-      <div class="product-card reveal reveal-delay-2">
-        <div class="product-visual">
-          <img src="images/product-net-blue.jpg" alt="NET Table">
-          <div class="product-color-dot" style="background:#D4826E;"></div>
-          <div class="product-overlay"><a href="#line-cta" class="overlay-btn">立即諮詢</a></div>
-        </div>
-        <div class="product-info">
-          <div class="product-rank">庫存 No.6 · 桌類</div>
-          <div class="product-name">Net Table 100</div>
-          <div class="product-color">CORALLO · 珊瑚紅</div>
-          <div class="product-stock"><span class="stock-badge">現貨充足</span><span class="product-sku">09ND40064-75000</span></div>
-        </div>
-      </div>
-      <div class="product-card reveal reveal-delay-3">
-        <div class="product-visual">
-          <img src="images/product-dining.jpg" alt="Net Table Salice">
-          <div class="product-color-dot" style="background:#8BA878;"></div>
-          <div class="product-overlay"><a href="#line-cta" class="overlay-btn">立即諮詢</a></div>
-        </div>
-        <div class="product-info">
-          <div class="product-rank">庫存 No.9 · 自然系推薦</div>
-          <div class="product-name">Net Table 100</div>
-          <div class="product-color">SALICE · 淺綠色</div>
-          <div class="product-stock"><span class="stock-badge">現貨充足</span><span class="product-sku">09ND40064-04000</span></div>
-        </div>
+      <div>
+        <div class="stat-num">8<span style="font-size:18px">款</span></div>
+        <div class="stat-label">床墊系列</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- GIFT GUIDE -->
-<section class="section gift-section" id="gift">
-  <div class="section-inner">
-    <span class="section-label reveal">選禮指南</span>
-    <h2 class="section-title reveal">不知道送什麼？<br><em>讓我們幫你挑</em></h2>
-    <p class="section-body reveal">根據媽媽的空間與喜好，我們整理了三種送禮組合方向。</p>
-    <div class="gift-grid">
-      <div class="gift-card reveal">
-        <img src="images/gift-small.jpg" alt="Balcony">
-        <div class="gift-card-content">
-          <div class="gift-num">01</div>
-          <div class="gift-title">小陽台的<br>專屬角落</div>
-          <div class="gift-body">適合空間有限的陽台或窗邊，輕巧可疊放，色彩療癒。一張椅子就是一整個下午。</div>
-          <div class="gift-products"><span class="gift-tag">Net Relax</span><span class="gift-tag">芥末黃 / 珊瑚紅</span></div>
+<!-- ─── PRODUCTS ─── -->
+<section class="products-section" id="products">
+  <div class="products-header reveal">
+    <div class="label">母親節精選床墊</div>
+    <h2>為媽媽挑選一張<em>會呼吸的床</em></h2>
+    <p class="products-sub">
+      以下商品皆有現貨，歡迎透過 LINE 諮詢搭配與試躺建議
+    </p>
+  </div>
+
+  <div class="products-grid">
+
+    <!-- Lappland -->
+    <div class="product-card reveal">
+      <div class="product-img-wrap">
+        <img src="images/product-lappland.jpg" alt="Lappland 拉普蘭床墊" class="product-img" loading="lazy">
+        <span class="product-tag">主推旗艦</span>
+      </div>
+      <div class="product-body">
+        <div class="product-series">旗艦系列</div>
+        <div class="product-name">Lappland</div>
+        <div class="product-name-zh">拉普蘭</div>
+        <div class="product-details">
+          <div class="product-detail">奧地利馬尾毛 × 有機羊毛</div>
+          <div class="product-detail">PROFLEX® 五區彈簧系統</div>
+          <div class="product-detail">天絲面料，單面使用</div>
+          <div class="product-detail">OEKO-TEX® · GOTS 認證</div>
+        </div>
+        <div class="product-firmness">
+          <span class="firmness-label">軟</span>
+          <div class="firmness-track"><div class="firmness-fill" style="width:52%"></div></div>
+          <span class="firmness-label">硬</span>
+        </div>
+        <div class="product-stock">軟硬度 <span>▪ 軟硬適中</span>　使用 <span>▪ 單面</span></div>
+        <a href="#line-cta" class="product-cta">LINE 諮詢 / 預約試躺</a>
+      </div>
+    </div>
+
+    <!-- Stockholm -->
+    <div class="product-card reveal reveal-delay-1">
+      <div class="product-img-wrap">
+        <img src="images/product-stockholm.jpg" alt="Stockholm 斯德哥爾摩床墊" class="product-img" loading="lazy">
+        <span class="product-tag sage">暢銷款</span>
+      </div>
+      <div class="product-body">
+        <div class="product-series">暢銷系列</div>
+        <div class="product-name">Stockholm</div>
+        <div class="product-name-zh">斯德哥爾摩</div>
+        <div class="product-details">
+          <div class="product-detail">英國天然羊毛舒適層</div>
+          <div class="product-detail">PROPOCKET® 紓壓彈簧</div>
+          <div class="product-detail">斯堪地那維亞藍白款式</div>
+          <div class="product-detail">雙面可翻轉使用</div>
+        </div>
+        <div class="product-firmness">
+          <span class="firmness-label">軟</span>
+          <div class="firmness-track"><div class="firmness-fill" style="width:62%"></div></div>
+          <span class="firmness-label">硬</span>
+        </div>
+        <div class="product-stock">軟硬度 <span>▪ 適中偏硬</span>　使用 <span>▪ 雙面</span></div>
+        <a href="#line-cta" class="product-cta">LINE 諮詢 / 預約試躺</a>
+      </div>
+    </div>
+
+    <!-- Kolbäcksån -->
+    <div class="product-card reveal reveal-delay-2">
+      <div class="product-img-wrap">
+        <img src="images/product-kolbacksan.jpg" alt="Kolbäcksån 科爾巴桑床墊" class="product-img" loading="lazy">
+        <span class="product-tag pine">台灣氣候適用</span>
+      </div>
+      <div class="product-body">
+        <div class="product-series">亞熱帶首選</div>
+        <div class="product-name">Kolbäcksån</div>
+        <div class="product-name-zh">科爾巴桑</div>
+        <div class="product-details">
+          <div class="product-detail">比利時亞麻面布 · 天然涼感</div>
+          <div class="product-detail">有效抑制螨蟲與黴菌</div>
+          <div class="product-detail">PROPOCKET® 彈簧系統</div>
+          <div class="product-detail">雙面使用 · 偏軟舒適</div>
+        </div>
+        <div class="product-firmness">
+          <span class="firmness-label">軟</span>
+          <div class="firmness-track"><div class="firmness-fill" style="width:42%"></div></div>
+          <span class="firmness-label">硬</span>
+        </div>
+        <div class="product-stock">軟硬度 <span>▪ 適中偏軟</span>　使用 <span>▪ 雙面</span></div>
+        <a href="#line-cta" class="product-cta">LINE 諮詢 / 預約試躺</a>
+      </div>
+    </div>
+
+    <!-- Norrbottens -->
+    <div class="product-card reveal">
+      <div class="product-img-wrap">
+        <img src="images/product-norrbottens.jpg" alt="Norrbottens 北博騰床墊" class="product-img" loading="lazy">
+      </div>
+      <div class="product-body">
+        <div class="product-series">天然質地</div>
+        <div class="product-name">Norrbottens</div>
+        <div class="product-name-zh">北博騰</div>
+        <div class="product-details">
+          <div class="product-detail">比利時亞麻面布</div>
+          <div class="product-detail">PROPOCKET® 紓壓彈簧</div>
+          <div class="product-detail">百年立體拉點手工藝</div>
+          <div class="product-detail">單面 · 軟硬適中</div>
+        </div>
+        <div class="product-firmness">
+          <span class="firmness-label">軟</span>
+          <div class="firmness-track"><div class="firmness-fill" style="width:52%"></div></div>
+          <span class="firmness-label">硬</span>
+        </div>
+        <div class="product-stock">軟硬度 <span>▪ 軟硬適中</span>　使用 <span>▪ 單面</span></div>
+        <a href="#line-cta" class="product-cta">LINE 諮詢 / 預約試躺</a>
+      </div>
+    </div>
+
+    <!-- Småland -->
+    <div class="product-card reveal reveal-delay-1">
+      <div class="product-img-wrap">
+        <img src="images/product-smaland.jpg" alt="Småland 斯莫蘭床墊" class="product-img" loading="lazy">
+        <span class="product-tag">駱駝毛 × 絲綢</span>
+      </div>
+      <div class="product-body">
+        <div class="product-series">頂級雙面</div>
+        <div class="product-name">Småland</div>
+        <div class="product-name-zh">斯莫蘭</div>
+        <div class="product-details">
+          <div class="product-detail">一面駱駝毛 · 一面天然蠶絲</div>
+          <div class="product-detail">100% 天然棉面料</div>
+          <div class="product-detail">PROFLEX® 五區彈簧</div>
+          <div class="product-detail">可依季節翻面使用</div>
+        </div>
+        <div class="product-firmness">
+          <span class="firmness-label">軟</span>
+          <div class="firmness-track"><div class="firmness-fill" style="width:60%"></div></div>
+          <span class="firmness-label">硬</span>
+        </div>
+        <div class="product-stock">軟硬度 <span>▪ 適中偏硬</span>　使用 <span>▪ 雙面</span></div>
+        <a href="#line-cta" class="product-cta">LINE 諮詢 / 預約試躺</a>
+      </div>
+    </div>
+
+    <!-- Bohuslän -->
+    <div class="product-card reveal reveal-delay-2">
+      <div class="product-img-wrap">
+        <img src="images/product-bohuslan.jpg" alt="Bohuslän 布胡斯床墊" class="product-img" loading="lazy">
+        <span class="product-tag sage">馬尾毛頂規</span>
+      </div>
+      <div class="product-body">
+        <div class="product-series">頂規系列</div>
+        <div class="product-name">Bohuslän</div>
+        <div class="product-name-zh">布胡斯</div>
+        <div class="product-details">
+          <div class="product-detail">奧地利頂級馬尾毛</div>
+          <div class="product-detail">PROPLUS® 全方位支撐彈簧</div>
+          <div class="product-detail">有機棉 × 有機羊毛混合</div>
+          <div class="product-detail">單面 · 軟硬適中</div>
+        </div>
+        <div class="product-firmness">
+          <span class="firmness-label">軟</span>
+          <div class="firmness-track"><div class="firmness-fill" style="width:55%"></div></div>
+          <span class="firmness-label">硬</span>
+        </div>
+        <div class="product-stock">軟硬度 <span>▪ 軟硬適中</span>　使用 <span>▪ 單面</span></div>
+        <a href="#line-cta" class="product-cta">LINE 諮詢 / 預約試躺</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── GIFT GUIDE ─── -->
+<section class="gift-section">
+  <div class="gift-header reveal">
+    <div class="label">選禮指南</div>
+    <h2>不知道送什麼？<em>讓我們幫你挑</em></h2>
+  </div>
+
+  <div class="gift-grid">
+
+    <div class="gift-card reveal">
+      <div class="gift-img-wrap">
+        <img src="images/gift-sleep.jpg" alt="給每天辛苦的她" class="gift-img" loading="lazy">
+      </div>
+      <div class="gift-num">01</div>
+      <div class="gift-body">
+        <div class="gift-title">給每天辛苦的<br>她一個好眠</div>
+        <div class="gift-desc">
+          媽媽總是最晚睡、最早起。選一張軟硬適中、有真正支撐的床墊，讓她每一個夜晚都是真正的休息。
+        </div>
+        <div class="gift-reco">
+          <strong>推薦系列</strong>
+          Lappland 拉普蘭 / Bohuslän 布胡斯
         </div>
       </div>
-      <div class="gift-card reveal reveal-delay-1">
-        <img src="images/gift-dining.jpg" alt="Dining">
-        <div class="gift-card-content">
-          <div class="gift-num">02</div>
-          <div class="gift-title">戶外用餐的<br>儀式感</div>
-          <div class="gift-body">桌椅成套，讓媽媽每天早晨的咖啡時光都像在義大利小鎮的露台上。</div>
-          <div class="gift-products"><span class="gift-tag">Net Table 100</span><span class="gift-tag">Chair × 2</span></div>
+    </div>
+
+    <div class="gift-card reveal reveal-delay-1">
+      <div class="gift-img-wrap">
+        <img src="images/gift-pillow.jpg" alt="枕頭配件加購" class="gift-img" loading="lazy">
+      </div>
+      <div class="gift-num">02</div>
+      <div class="gift-body">
+        <div class="gift-title">加一顆對的枕頭<br>讓禮物更完整</div>
+        <div class="gift-desc">
+          好床墊搭配好枕頭才完整。Hälsa 枕頭系列從駱駝毛、天然乳膠到英國羊毛，讓我們依媽媽的睡姿推薦最適合的。
+        </div>
+        <div class="gift-reco">
+          <strong>推薦系列</strong>
+          Ljungan 駱駝毛枕 / Blekinge 亞麻枕
         </div>
       </div>
-      <div class="gift-card reveal reveal-delay-2">
-        <img src="images/gift-family.jpg" alt="Family">
-        <div class="gift-card-content">
-          <div class="gift-num">03</div>
-          <div class="gift-title">給全家人的<br>戶外客廳</div>
-          <div class="gift-body">Komodo 模組沙發系統，讓戶外空間像室內一樣舒適，是全家都能享受的節日禮物。</div>
-          <div class="gift-products"><span class="gift-tag">Komodo Seduta</span><span class="gift-tag">自由配置</span></div>
+    </div>
+
+    <div class="gift-card reveal reveal-delay-2">
+      <div class="gift-img-wrap">
+        <img src="images/gift-full.jpg" alt="完整寢具組合" class="gift-img" loading="lazy">
+      </div>
+      <div class="gift-num">03</div>
+      <div class="gift-body">
+        <div class="gift-title">床墊 × 枕頭 × 棉被<br>完整守護全年睡眠</div>
+        <div class="gift-desc">
+          Hälsa 整套寢具，從床墊到棉被全天然。今年就給媽媽一個真正完整的升級，讓她從此每晚都睡得像在北歐森林裡。
+        </div>
+        <div class="gift-reco">
+          <strong>推薦組合</strong>
+          床墊 + Ljungan 枕 + Indalsälven 被
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── WHY ─── -->
+<div class="why-section">
+  <div class="why-img-wrap">
+    <img src="images/why.jpg" alt="Hälsa 瑞典工廠" class="why-img">
+    <div class="why-img-overlay"></div>
+    <div class="why-img-caption">Landskrona · Sweden</div>
+  </div>
+
+  <div class="why-text reveal">
+    <div class="label label-sage">為什麼選擇 Hälsa</div>
+    <h2>送給媽媽的，<br>值得<em>最好的</em></h2>
+
+    <div class="why-items">
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <div>
+          <div class="why-content-title">全天然，無妥協</div>
+          <div class="why-content-desc">馬尾毛、駱駝毛、有機羊毛、比利時亞麻——沒有一片泡棉，沒有一滴化學膠，所有材質都看得見。</div>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <div>
+          <div class="why-content-title">瑞典鋼，25 年壽命</div>
+          <div class="why-content-desc">與 VOLVO 同源的高純度瑞典鋼彈簧，透過專利熱處理工藝，回彈力保持 25 年以上不衰減。</div>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <div>
+          <div class="why-content-title">職人手工，不可複製</div>
+          <div class="why-content-desc">每一張床墊由瑞典職人純手工縫製。這份工藝 85 年來一針一線地傳承，機器無法取代。</div>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">04</div>
+        <div>
+          <div class="why-content-title">台中門市 · 專業試躺</div>
+          <div class="why-content-desc">台中南屯實體門市，專業顧問依體型、睡姿、習慣為媽媽量身推薦，歡迎親子一起來試躺。</div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<!-- ─── FINAL CTA ─── -->
+<section id="line-cta">
+  <div class="cta-label">母親節限定 · 現在諮詢</div>
+  <h2 class="cta-title">
+    讓我們幫你<br>
+    找到<em>最完美</em>的那一張
+  </h2>
+  <p class="cta-sub">
+    不確定哪款最適合？想知道適合媽媽體型的軟硬度？<br>
+    透過官方 LINE 與我們聯繫，專人為你量身推薦，母親節前下單優先安排。
+  </p>
+
+  <a href="https://lin.ee/YOUR_LINE_ID" class="line-btn" target="_blank" rel="noopener">
+    <svg class="line-icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19.365 9.89c.50 0 .866.371.866.866s-.365.866-.866.866h-2.355v1.39h2.355c.50 0 .866.37.866.866s-.365.866-.866.866H16.14a.87.87 0 01-.866-.866V8.157a.87.87 0 01.866-.866h3.225c.50 0 .866.37.866.866s-.365.866-.866.866H17.01v.867zm-6.435 4.022a.865.865 0 01-.866.866.854.854 0 01-.698-.352l-3.29-4.472v3.958a.87.87 0 01-.866.866.87.87 0 01-.866-.866V8.157a.87.87 0 01.866-.866c.272 0 .521.127.683.339l3.305 4.488V8.157a.87.87 0 01.866-.866c.5 0 .866.37.866.866zm-8.118.866a.87.87 0 01-.866-.866V8.157a.87.87 0 011.733 0v5.763a.87.87 0 01-.867.866zM24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.832 4.27 8.878 10.035 9.645 1.351.291 2.529.444 2.529 1.02 0 .372-.147.641-.289.803-.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+    </svg>
+    LINE 官方帳號諮詢
+  </a>
+
+  <div class="cta-note">專人回覆 · 母親節前下單享優先安排</div>
+
+  <p style="margin-top:40px; font-size:12.5px; color:rgba(255,255,255,0.3); position:relative; z-index:1; line-height:1.8">
+    <strong style="color:rgba(255,255,255,0.5); font-family:'Cormorant Garamond',serif; font-size:15px; font-weight:300; letter-spacing:0.08em">捷行國際家居</strong><br>
+    Hälsa Mattress · Taiwan Official Distributor · Since 1936<br>
+    台中市南屯區永春東七路 531 號 · 04-2380-0298
+  </p>
 </section>
 
-<!-- MADE IN ITALY -->
-<section class="section italy-section">
-  <div class="section-inner">
-    <span class="section-label reveal">為什麼選 Nardi</span>
-    <h2 class="section-title reveal">送給媽媽的，<br>值得<em>最好的</em></h2>
-    <div class="italy-grid">
-      <div class="italy-visual reveal">
-        <img src="images/italy.jpg" alt="Italian outdoor">
-        <div class="italy-visual-tag">Puglia · Italy</div>
-      </div>
-      <div class="italy-items">
-        <div class="italy-item reveal">
-          <div class="italy-num">30+</div><div class="italy-accent"></div>
-          <div class="italy-title">年義大利工藝</div>
-          <div class="italy-body">每一件傢俱都在義大利 Vicenza 工廠製造，品質從不妥協，這份承諾延續超過三十年。</div>
-        </div>
-        <div class="italy-item reveal reveal-delay-1">
-          <div class="italy-num">100%</div><div class="italy-accent"></div>
-          <div class="italy-title">可回收環保材質</div>
-          <div class="italy-body">聚丙烯材質抗 UV、耐候、無毒，送給媽媽的同時也對地球盡一份心意。</div>
-        </div>
-        <div class="italy-item reveal reveal-delay-2">
-          <div class="italy-num">∞</div><div class="italy-accent"></div>
-          <div class="italy-title">年的陪伴時光</div>
-          <div class="italy-body">不褪色、不變形、不怕風吹日曬——這不只是一件傢俱，是每個清晨與黃昏，陪在媽媽身邊的那張椅子。</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section" id="line-cta">
-  <div class="cta-floating-decor decor-left">N</div>
-  <div class="cta-floating-decor decor-right">M</div>
-  <div class="cta-content">
-    <div class="cta-eyebrow reveal">母親節限定 · 現在諮詢</div>
-    <h2 class="cta-title reveal">讓我們幫你<br>找到<em>最完美</em>的那一件</h2>
-    <p class="cta-desc reveal">不確定哪個顏色最適合？空間尺寸怎麼搭配？<br>透過官方 LINE 與我們聯繫，專人為你量身推薦。</p>
-    <a href="https://lin.ee/YOUR_LINE_ID" class="line-btn reveal" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.105.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-      LINE 官方帳號諮詢
-    </a>
-    <div class="cta-note reveal">專人回覆 · 母親節前下單享優先配送</div>
-  </div>
-</section>
-
-<!-- FOOTER -->
+<!-- ─── FOOTER ─── -->
 <footer>
-  <p><strong>捷行國際家居</strong><br>Nardi Outdoor Furniture · Official Taiwan Distributor<br>Made in Italy · Since 1990</p>
+  <div class="footer-brand">Hälsa <em>ART OF SWEDEN</em></div>
+  <div class="footer-info">
+    © 2026 捷行國際家居 · Hälsa 台灣總代理<br>
+    台中市南屯區永春東七路 531 號 · 04-2380-0298
+  </div>
 </footer>
 
-<!-- STICKY LINE -->
-<div class="sticky-line">
-  <div class="sticky-label">母親節限定</div>
-  <a href="https://lin.ee/YOUR_LINE_ID" class="sticky-line-btn" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.105.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-    LINE 立即諮詢
-  </a>
-</div>
+<!-- ─── FLOATING LINE ─── -->
+<a href="https://lin.ee/YOUR_LINE_ID" class="float-line" target="_blank" rel="noopener" id="float-btn">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+    <path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.832 4.27 8.878 10.035 9.645 1.351.291 2.529.444 2.529 1.02 0 .372-.147.641-.289.803-.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+  </svg>
+  母親節限定
+</a>
 
 <script>
-const hero = document.querySelector('.hero');
-for (let i = 0; i < 18; i++) {
-  const p = document.createElement('div');
-  p.className = 'petal';
-  p.style.cssText = `left: ${Math.random() * 100}%; width: ${4 + Math.random() * 6}px; height: ${7 + Math.random() * 8}px; animation-duration: ${8 + Math.random() * 12}s; animation-delay: ${Math.random() * 10}s; transform: rotate(${Math.random() * 360}deg);`;
-  hero.appendChild(p);
-}
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+// Hide float btn when CTA in view
+const ctaSection = document.getElementById('line-cta');
+const floatBtn = document.getElementById('float-btn');
+const ctaObserver = new IntersectionObserver((entries) => {
+  floatBtn.style.opacity = entries[0].isIntersecting ? '0' : '1';
+  floatBtn.style.pointerEvents = entries[0].isIntersecting ? 'none' : 'auto';
+}, { threshold: 0.2 });
+ctaObserver.observe(ctaSection);
+
+// Smooth anchor scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     e.preventDefault();
