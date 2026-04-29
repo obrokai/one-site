@@ -38,7 +38,7 @@ body { font-family: 'Noto Serif TC', Georgia, serif; background: var(--ivory); c
   align-items: center;
   text-align: center;
   padding: 0 24px;
-  background: var(--deep-pine);
+  background: #2C1810;
   overflow: hidden;
 }
 
@@ -47,15 +47,15 @@ body { font-family: 'Noto Serif TC', Georgia, serif; background: var(--ivory); c
   inset: 0;
   background-image: url('images/hero.jpg');
   background-size: cover;
-  background-position: center 40%;
-  opacity: 0.35;
+  background-position: center 30%;
+  opacity: 0.55;
   transform: scale(1.04);
-  animation: heroZoom 18s ease-in-out infinite alternate;
+  animation: heroZoom 20s ease-in-out infinite alternate;
 }
 
 @keyframes heroZoom {
-  from { transform: scale(1.04); }
-  to   { transform: scale(1.10); }
+  from { transform: scale(1.04) translateY(0px); }
+  to   { transform: scale(1.12) translateY(-12px); }
 }
 
 .hero-overlay {
@@ -63,10 +63,44 @@ body { font-family: 'Noto Serif TC', Georgia, serif; background: var(--ivory); c
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(42,59,48,0.55) 0%,
-    rgba(42,59,48,0.30) 50%,
-    rgba(42,59,48,0.75) 100%
+    rgba(44,24,16,0.45) 0%,
+    rgba(80,40,20,0.20) 40%,
+    rgba(44,24,16,0.80) 100%
   );
+}
+
+/* 浮動光點粒子 */
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+.hero-particles span {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,210,160,0.9) 0%, rgba(255,170,80,0.0) 70%);
+  animation: floatUp linear infinite;
+  opacity: 0;
+}
+@keyframes floatUp {
+  0%   { transform: translateY(0) scale(1);   opacity: 0; }
+  15%  { opacity: 1; }
+  85%  { opacity: 0.6; }
+  100% { transform: translateY(-110vh) scale(0.4); opacity: 0; }
+}
+
+/* 暖光脈動光暈 */
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% 60%, rgba(200,100,50,0.18) 0%, transparent 70%);
+  animation: glowPulse 4s ease-in-out infinite alternate;
+  z-index: 1;
+}
+@keyframes glowPulse {
+  from { opacity: 0.6; transform: scale(1); }
+  to   { opacity: 1;   transform: scale(1.08); }
 }
 
 .hero-badge-row {
@@ -104,7 +138,7 @@ body { font-family: 'Noto Serif TC', Georgia, serif; background: var(--ivory); c
   animation: fadeUp 0.9s ease 0.4s both;
 }
 
-.hero-title em { font-style: italic; color: #B8CEB0; }
+.hero-title em { font-style: italic; color: #E8B98A; text-shadow: 0 0 40px rgba(232,185,138,0.5); }
 
 .hero-sub {
   position: relative;
@@ -844,6 +878,8 @@ footer {
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-particles" id="heroParticles"></div>
 
   <div class="hero-badge-row">
     <span class="hero-badge accent">母親節限定</span>
@@ -1298,6 +1334,28 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
+
+// 浮動暖光粒子
+(function() {
+  const container = document.getElementById('heroParticles');
+  if (!container) return;
+  const count = 28;
+  for (let i = 0; i < count; i++) {
+    const s = document.createElement('span');
+    const size = Math.random() * 6 + 3; // 3–9px
+    const left = Math.random() * 100;
+    const delay = Math.random() * 14;
+    const duration = Math.random() * 10 + 12; // 12–22s
+    s.style.cssText = `
+      width:${size}px; height:${size}px;
+      left:${left}%;
+      bottom:${Math.random() * 20 - 10}%;
+      animation-duration:${duration}s;
+      animation-delay:${delay}s;
+    `;
+    container.appendChild(s);
+  }
+})();
 </script>
 </body>
 </html>
