@@ -852,23 +852,120 @@ footer {
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 
-/* ── MOBILE ── */
+/* ── TABLET (≤860px) ── */
 @media (max-width: 860px) {
   .section, .section-sm { padding: 64px 24px; }
-  .brand-section { grid-template-columns: 1fr; padding: 64px 24px; gap: 48px; }
-  .brand-stats { position: static; margin-top: 20px; }
-  .brand-img { aspect-ratio: 3/2; }
-  .products-grid { grid-template-columns: 1fr; padding: 0; }
+
+  /* Trust bar: 橫向捲動 */
+  .trust-bar {
+    padding: 12px 20px;
+    gap: 14px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .trust-bar::-webkit-scrollbar { display: none; }
+  .trust-dot { flex-shrink: 0; }
+  .trust-item { flex-shrink: 0; white-space: nowrap; }
+
+  /* Brand */
+  .brand-section { grid-template-columns: 1fr; padding: 64px 24px; gap: 36px; }
+  .brand-stats { position: static; margin-top: 20px; grid-template-columns: repeat(3, 1fr); }
+  .brand-img { aspect-ratio: 16/9; }
+
+  /* Products: 2 欄 */
   .products-section { padding: 64px 24px; }
-  .gift-grid { grid-template-columns: 1fr; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); padding: 0; gap: 20px; }
+
+  /* Gift */
   .gift-section { padding: 64px 24px; }
+  .gift-grid { grid-template-columns: 1fr; gap: 20px; }
+
+  /* Why */
   .why-section { grid-template-columns: 1fr; }
-  .why-img-wrap { min-height: 260px; }
-  .why-text { padding: 56px 28px; }
+  .why-img-wrap { min-height: 300px; }
+  .why-text { padding: 48px 28px; }
+
+  /* CTA & Footer */
   #line-cta { padding: 72px 24px; }
   footer { padding: 36px 24px; }
   .footer-info { text-align: left; }
-  .trust-bar { padding: 14px 24px; gap: 12px; }
+
+  /* Float LINE btn */
+  .float-line { bottom: 20px; right: 16px; padding: 11px 18px; font-size: 12px; }
+}
+
+/* ── PHONE (≤480px) ── */
+@media (max-width: 480px) {
+  /* Hero */
+  .hero { padding: 0 20px; }
+  .hero-title { font-size: clamp(36px, 11vw, 56px); line-height: 1.1; margin-bottom: 18px; }
+  .hero-sub { font-size: 13px; line-height: 1.7; margin-bottom: 28px; }
+  .hero-cta-row { flex-direction: column; align-items: center; gap: 12px; width: 100%; }
+  .btn-hero-primary, .btn-hero-ghost {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    padding: 15px 24px;
+    font-size: 14px;
+  }
+  .hero-scroll { display: none; }
+  .hero-badge { font-size: 10px; padding: 5px 12px; }
+
+  /* Section spacing */
+  .section, .section-sm { padding: 48px 18px; }
+
+  /* Brand */
+  .brand-section { padding: 48px 18px; gap: 28px; }
+  .brand-stats { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .brand-stat-num { font-size: 28px; }
+  .brand-pills { gap: 8px; }
+  .pill { font-size: 11px; padding: 5px 12px; }
+
+  /* Products: 1 欄 */
+  .products-section { padding: 48px 18px; }
+  .products-grid { grid-template-columns: 1fr; gap: 16px; }
+  .product-img-wrap { aspect-ratio: 4/3; }
+  .products-header h2 { font-size: clamp(24px, 7vw, 36px); }
+
+  /* Gift */
+  .gift-section { padding: 48px 18px; }
+  .gift-img-wrap { aspect-ratio: 16/9; }
+
+  /* Why */
+  .why-img-wrap { min-height: 220px; }
+  .why-text { padding: 36px 18px; }
+  .why-text h2 { font-size: clamp(22px, 6vw, 32px); }
+
+  /* CTA */
+  #line-cta { padding: 56px 18px; }
+  .cta-title { font-size: clamp(26px, 8vw, 40px); }
+  .line-btn { width: 100%; max-width: 320px; text-align: center; justify-content: center; }
+
+  /* Footer */
+  footer { padding: 28px 18px; }
+  .footer-brand { font-size: 13px; }
+
+  /* Float LINE: 全寬底部 */
+  .float-line {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 13px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+  }
+
+  /* 底部 padding 避免被 LINE btn 遮住 */
+  body { padding-bottom: 52px; }
+  #line-cta { padding-bottom: 80px; }
+
+  h2 { font-size: clamp(22px, 6.5vw, 36px); }
 }
 </style>
 </head>
